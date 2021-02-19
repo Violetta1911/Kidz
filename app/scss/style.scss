@@ -5,6 +5,12 @@
 
 // header 
 .header {  
+   a {
+      font-family: 'Open Sans', sans-serif;
+   }
+   &__menu {
+      box-shadow: 0px 4px 0px 0px rgba(0, 0, 0, 0.1);
+   }
    &__contacts {
       padding: 12px 0;
       background-color: #2f3c43; 
@@ -24,6 +30,7 @@
 .contacts,
 .social {
   line-height: 23px;
+  color: rgba(255, 255, 255, 0.8);
   li {
    display: inline-block;
    padding-left: 30px;
@@ -38,68 +45,563 @@
   }
   
 }
-.icon-envelope-o::before {
-   @include icons-header;    
-   background-color: $yellow;     
+.contacts {
+   .icon-envelope-o::before {
+      @include icons-header;    
+      background-color: $yellow;     
+   }
+   .icon-clock-o::before {
+    @include icons-header;    
+    background-color: $pink;    
+   }
+   .icon-phone::before { 
+    @include icons-header;    
+    background-color: $green;    
+   }
 }
-.icon-clock-o::before {
- @include icons-header;    
- background-color: $pink; 
-
+.social {
+   .icon-globe::before {
+      @include icons-header;    
+      background-color: $blue; 
+      top: 0px;    
+   }
+   .icon-globe::after {
+      content: "\f00c";
+      position: absolute;
+      right: -20px;    
+   }
    
-}
-.icon-phone::before { 
- @include icons-header;    
- background-color: $green;    
-}
-.icon-globe::before {
-   @include icons-header;    
-   background-color: $blue; 
-   top: 0px;    
-}
-.icon-globe::after {
-   content: "\f00c";
-   position: absolute;
-   right: -20px; 
+   .icon-unlock-alt::before {
+      @include icons-header;    
+      background-color: $violet; 
+      top: 0px;
+   }
+   .icon-shopping-basket::before {
+      position: absolute;
+      width: 30px;
+      height: 30px;
+      border-radius: 5px;
+      background-color: $red;
+      text-align: center;
+      padding-top: 6px;
+      right: 10px;
+      top: -15px;
+   }
 
 }
 
-.icon-unlock-alt::before {
-   @include icons-header;    
-   background-color: $violet; 
-   top: 0px;
-}
-.icon-shopping-basket::before {
-   position: absolute;
-   width: 30px;
-   height: 30px;
-   border-radius: 5px;
-   background-color: $red;
-   text-align: center;
-   padding-top: 6px;
-   right: 10px;
-   top: -15px;
-}
 .menu-list {
+   margin-top: 40px;
 
    li { 
       position: relative;
+    
+     
+      a {
+         font-size: 15px;
+         font-weight: 800px;
+      }
            
       display: inline-block;
       & + li {
-         margin-left: 60px;
+         line-height: 20px;
+         margin-left: 30px;
+         padding-left: 30px;
+         border-left: 3px solid $yellow;
       }
-      & + li a::before {
-               
-         content: '';
-         border-right: 1px solid $yellow;
-         left: 0;
+     
+   }
+   .icon-home {
+      a:hover,
+      a:focus {
+         color: $yellow
+      }
+      &::before {
+         @include icons-header-menu;         
+         background-color: $yellow;         
+      }
+   }
+   .icon-file-text {
+      a:hover,
+      a:focus {
+         color: $green;
+      }
+      &::before {
+         @include icons-header-menu;         
+         background-color: $green; 
+         padding: 8px 0 0 12px;            
+      }
+   }
+   .icon-list {
+      a:hover,
+      a:focus {
+         color: $red;
+      }
+      &::before {
+         @include icons-header-menu;         
+         background-color: $red;
+         padding: 8px 0 0 10px;            
+      }
+   }
+   .icon-pencil-square-o {
+      a:hover,
+      a:focus {
+         color: $blue;
+      }
+      &::before {
+         @include icons-header-menu;         
+         background-color: $blue; 
+         padding: 9px 0 0 11px;            
+      }
+   }
+   .icon-calendar {
+      a:hover,
+      a:focus {
+         color: $violet;
+      }
+      &::before {
+         @include icons-header-menu;         
+         background-color: $violet;
+         padding: 8px 0 0 10px;      
 
+      }
+   }
+   .icon-gg {
+      a:hover,
+      a:focus {
+         color: $pink;
+      }
+      &::before {
+         @include icons-header-menu;         
+         background-color: $pink;   
+         padding: 8px 0 0 8px;      
       }
    }
 }
 
+// start main-slider
+
+.main-slider {
+   position: relative;
+   text-shadow:  0px 4px 2px  rgba(0, 0, 0, 0.3);
+   .slick-slider {      
+      max-height: 560px;
+      overflow: hidden;
+      align-items: center;      
+      } 
+  
+   h1 {
+      font-size: 52px;
+      font-weight: bold;
+      margin-bottom: 15px;
+   }
+   p {
+      font-size: 25px;
+      font-family: 'Dosis', sans-serif;
+      line-height: 1.36;
+      width: 670px;
+     
+   }
+   &__item-info {
+      position: absolute;
+      top: 140px;
+      z-index: 5;
+      color: #fff;
+   }
+}
+
+//  start block
+
+.block {    
+   position: relative; 
+   height: 106px; 
+   
+   &__inner {
+      @include flex;
+      
+      width: 1200px;  
+      position: absolute; 
+      top: -100px;
+   }
+   &__item {
+      position: relative;
+      width: 270px;
+      height: 190px;
+      border-radius: 10px;
+      padding-top: 85px;      
+      box-shadow: 0px 4px 0px 0px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      color: #fff;
+          
+      h3 {
+       font-size: 32px;
+       font-weight: 600;      
+      }
+      .icon-file-text  {
+         @include icon-block;       
+         border: 6px solid $yellow;
+         color: $yellow;
+         &::after {
+            content: "\f078";
+            position: absolute;
+            bottom: -100px;
+            left: 40px;
+            color:#fff;
+            font-size: 18px;            
+         }
+      }
+      .icon-calendar-o   {
+         @include icon-block;           
+         border: 6px solid $green;        
+         color: $green;
+      } 
+      .icon-image  {
+         @include icon-block;           
+         border: 6px solid $red;        
+         color: $red;
+      }
+      .icon-copy  {
+         @include icon-block;           
+         border: 6px solid $blue;        
+         color: $blue;
+      } 
+
+   }
+}
+
+// start features 
+
+.features {
+   padding: 95px 0 100px;
+  
+   &__inner {
+      @include flex;
+      flex-wrap: wrap;
+   }
+   &__item {
+     position: relative;
+     width: 360px;     
+     margin-top: 50px;
+     padding-left: 100px;
+     
+     
+     span {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 76px;
+        height: 76px;
+        border-radius: 50%;        
+        box-shadow: 3.441px 4.915px 0px 0px rgba(0, 0, 0, 0.1);
+        color: #fff;
+        text-align: center;
+        padding-top: 30px;               
+     }
+     
+     p {
+      font-size: 14px;
+      font-family: "OpenSans";
+      color: rgb(102, 102, 102);
+      line-height: 1.714;
+     }
+     .icon-graduation-cap::before,
+     .icon-leaf::before,
+     .icon-car::before,
+     .icon-heart::before,
+     .icon-cutlery::before,
+     .icon-shield::before
+      {
+        border-radius: 50%;
+        border: 2px solid #fff;
+        padding: 20px;
+     }
+   }
+}
+// start more-information 
+
+.more-information {
+   height: 295px;
+   background-position:bottom;
+   background-repeat: no-repeat;
+   text-align: center;
+   color: #fff;
+   padding-top: 70px;
+    font-family: 'OpenSans', sans-serif;
+   h2 {
+      margin-bottom: 20px;
+   }
+  
+  a {
+   padding: 10px 20px;
+   margin-top: 30px;
+   line-height: 25px;
+   border-radius: 5px;
+   box-shadow: 0px 4px 0px 0px rgba(0, 0, 0, 0.1);
+   background-color: $red;   
+   text-transform: uppercase;
+   font-size: 16px;
+   margin-top: 30px;
+   line-height: 25px;    
+
+  }
+}
+
+// start courses 
+
+.courses {
+   padding: 100px 0;
+  
+
+   &__inner {
+      margin-top: 50px;
+      @include flex;
+   }
+   &__item {
+      width: 270px;
+      padding-bottom: 24px;
+      border-radius: 10px;
+      box-shadow: 0px 4px 0px 0px rgba(0, 0, 0, 0.1);
+      background-color: #f8f8f8;
+      font-family: 'OpenSans', sans-serif;
+      color: rgb(102, 102, 102);
+      &-img {
+         padding: 20px;
+         height: 230px;
+         margin-bottom: 20px;
+         border-bottom: 5px solid $yellow ;
+         background-position: center;
+         background-repeat: no-repeat;
+         background-size: cover;
+         span {
+            display: block;
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            color: #fff;
+            text-align: center;
+            padding-top: 20px;
+           font-size: 24px;
+           font-weight: 600;
+           font-family:  'Open Sans', sans-serif;
+            &.border--green {
+            border-bottom: 5px solid $green;
+         } 
+           &.border--red {
+            border-bottom: 5px solid $red;
+         } 
+           &.border--blue {
+            border-bottom: 5px solid $blue;
+         } 
+           
+         } 
+         &.border--green {
+            border-bottom: 5px solid $green;
+         } 
+         &.border--red {
+            border-bottom: 5px solid $red;
+         } 
+         &.border--blue {
+            border-bottom: 5px solid $blue;
+         } 
+   }
+   &-info {
+      padding: 0 10px 0 20px;
+   }
+   &-age,
+   &-schedule {
+      margin-bottom: 8px;
+      font-size: 13px;
+      line-height: 1.077;
+      font-weight: 600;
+    
+   }
+   p {
+      margin: 18px 0 20px;
+      font-size: 14px;
+      line-height: 1.714;
+   }
+  
+}
+button {
+   margin-right: 20px;
+   border-radius: 5px;
+   background-color: rgb(255, 255, 255);
+   box-shadow: 0px 4px 0px 0px rgba(0, 0, 0, 0.1);
+   width: 157px;
+   height: 40px;
+   text-transform: uppercase;
+   outline: none;
+   border: none;
+   color: rgb(102, 102, 102);
+   transition: all 0.3s;
+   &:hover {
+      background-color: $yellow;
+      color: #fff;     
+         &.border--blue {
+           background-color: $blue;
+   
+         }
+         &.border--green {
+            background-color: $green;
+            
+         }
+         &.border--red {
+            background-color: $red;
+           
+         }      
+      
+   }
+}
+a {
+   padding-left: 7px;
+   font-weight: 600;
+   position: relative;
+   &:hover {
+      border-bottom: 1px solid $yellow;
+      color: $yellow;
+      &.font--blue {
+         border-bottom: 1px solid $blue;
+      color: $blue;
+      }
+      &.font--green {
+         border-bottom: 1px solid $green;
+      color: $green;
+      }
+      &.font--red {
+         border-bottom: 1px solid $red;
+      color: $red;
+      }      
+   }
+}
+.icon-angle-double-right::before {
+   position: absolute;
+   left: -7px;
+}
+}
+
+// start teachers
+
+.teachers {
+   padding: 100px 0 50px;
+   background-image: url(../images/teachers/background.jpg);
+   background-repeat: no-repeat;
+   background-size: cover;
+   &__slider-item {
+      max-width: 150px;
+      color: #fff;
+      img {
+         width: 150px;
+         height: 150px;
+         border-radius: 50%;
+         transition: all 1s;
+      }   
+   }
+   .slick-slider {
+       margin: 50px -33px;     
+  }
+  .slick-slide {
+      margin: 0 -33px;      
+      text-align: center;
+      margin: 0 33px;
+      
+  }
  
+  .slick-prev,
+  .slick-next {
+     top:64px;
+  }
+  .slick-prev {
+     left: 0px;
+  }
+  .slick-next {
+   right: 0px;
+}
+
+   .title-decor--teachers.title-decor  {     
+      width: 270px;
+      color: #fff;
+      text-align: center;   
+     
+      &::before,
+      &::after {
+         position: absolute;
+         top: 35%;
+         content: '';        
+         width: 17px;
+         height: 17px;
+         border-radius: 50%;         
+         background-color: $red;
+    }
+    &::before {
+      left: 20px;
+   }
+   &::after {
+      right: 20px;
+   }  
+   }
+   .decor-line--right {
+      right: -31px;
+      
+  }
+  .decor-line--left {
+   left: -31px;
+}
+.decor-line {  
+     background-color: $red;  
+      &::before{        
+         border-bottom: 2px solid $red;        
+      }
+   }
+    
+   h5 {
+      margin: 20px 0 10px;
+      font-size: 20px;
+      font-family: "OpenSans";
+      line-height: 1.1;
+      transition: all 1s;
+   }
+   span {
+      font-family: "OpenSans";
+      opacity: 0.7;
+       line-height: 1.467;
+      
+   }
+   .slick-current  {
+      h5 {
+         color: $yellow;
+      }
+      img {
+         opacity: 0.5;
+      }
+      .social-links {
+         opacity: 1;
+      }
+    
+  }
+  .social-links {
+     opacity: 0;
+     transform: translateY(-75px);
+     @include flex;
+     width: 115px;
+     margin: 0 auto;
+     color: #fff;
+     transition: all 1s;
+
+  }
+}
+
+
+ 
+ 
+
+
+ 
+ 
+ 
+ 
+
+ 
+
  
 
 

@@ -16,6 +16,7 @@ html {
      text-decoration: none;
      color: inherit;
      outline: none;
+     cursor: pointer;
  }
  
 
@@ -31,14 +32,19 @@ html {
  }
  
  body {
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Dosis', sans-serif;
     font-weight: 400;
-    font-size: 14px;   
-     height: 100%;    
+    font-size: 15px;   
+     height: 100%; 
+    
       }
   .container {
       max-width: 1200px;
       margin: 0 auto;
+  }
+
+  .content {
+      max-width: 1900px;
   }
   .line {
       display:flex;
@@ -46,26 +52,159 @@ html {
       &__item {        
           width: 160px;
           height: 6px;          
-          &--yellow {
-              background-color: $yellow;
-          }
-          &--green {
-            background-color: $green;
-        }
-        &--pink {
-            background-color: $pink;
-        }
-        &--blue {
-            background-color: $blue;
-        }
-        &--red {
-            background-color: $red;
-        }
-        &--violet {
-            background-color: $violet;
-        }
       }
   }
+  h2 {
+      font-size: 32px;        
+  }
+  h4 {
+    margin-bottom: 15px;
+    font-size: 24px;
+    font-family: "Dosis";
+    font-weight: bold;
+    line-height: 0.917;
+    
+ }
+  .title-decor {     
+    width: 185px;
+    color: $red;
+    text-align: center;   
+   
+    &::before,
+    &::after {
+       position: absolute;
+       top: 35%;
+       content: '';        
+       width: 17px;
+       height: 17px;
+       border-radius: 50%;         
+       background-color: $blue;
+  }
+  &::before {
+    left: 49px;
+ }
+ &::after {
+    right: 49px;
+ }
+
+ }
+
+  .bg--yellow {
+    background-color: $yellow;
+   } 
+   .font-yellow {
+       color: $yellow;
+   }
+   .bg--green {
+    background-color: $green;
+   }  
+   .font-green {
+    color: $green;
+}
+   .bg--red {
+    background-color: $red;
+   } 
+   .font-red {
+    color: $red;
+} 
+   .bg--blue {
+    background-color: $blue;
+   } 
+   .font-blue {
+    color: $blue;
+} 
+   .bg--violet {
+    background-color: $violet;
+   }  
+   .font-violet {
+    color: $violet;
+}
+   .bg--pink {
+    background-color: $pink;
+   } 
+   .font-pink {
+    color: $pink;
+}    
+   .title-block {
+       position: relative;
+       width: 360px;
+       display: flex;
+       justify-content: center;
+       margin: 0 auto 30px;
+   }   
+   .decor-line {  
+    width:50px;
+    height: 2px;
+    background-color: $blue;
+    &--left,
+    &--right {
+       position: absolute;
+       top: 50%;
+       &::before{
+          content: '';
+          position: absolute;
+          width: 40px;
+          border-bottom: 2px solid $blue;
+          top: 3px;
+       }
+    }
+    &--right{    
+      right: 0px;     
+      &::before{
+         left: -2px;
+      }
+    } &--left{      
+        left: 0px;        
+        &::before{         
+          right: -2px;
+       }
+      }
+     
+ }
+ 
+  .slick-prev,
+  .slick-next {
+    font-size: 0;
+    line-height: 0;
+    position: absolute;
+    top: 215px;
+    display: block;
+    width: 50px;
+    height: 50px;
+    color: black;
+    border-radius: 9px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 4px 0px 0px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+}
+.slick-next::before,
+.slick-prev::before  {   
+        font-family: 'icomoon';
+        color:rgb(102, 102, 102);
+        font-size: 16px;    
+}
+.slick-next {
+    right: 30px;
+    &::before {
+        content: "\f061";
+    }
+}
+.slick-prev {
+    left: 30px;
+    &::before {
+        content: "\f060";
+    }
+}
+.slick-prev:hover,
+.slick-prev:focus,
+.slick-next:hover, 
+.slick-next:focus {    
+    background: white;  
+}
+
+
+
+  
 
 // .menu-list {                
 //         @include flex;
@@ -218,4 +357,3 @@ html {
 
 //     }
 // }    
-
