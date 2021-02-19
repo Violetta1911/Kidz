@@ -1,0 +1,73 @@
+
+
+ $yellow: #f0c24b;
+ $pink: #ea77ad;
+ $green: #b5d56a;
+ $red: #ea7066;
+ $blue: #84bed6;
+ $violet: #a597e7;
+
+ @mixin flex {
+     display: flex;
+     justify-content: space-between;
+ } 
+ 
+ @mixin icons-header {
+    position: absolute;
+    left:0;
+    width: 21px;
+    height: 21px;
+    border-radius: 50%;
+    color: #fff;
+    font-size: 12px;
+    text-align: center;
+    padding: 5px 0;
+ } 
+//  @mixin slider-btn {
+    
+//     button {
+//         &.slick-prev,
+//         &.slick-next{
+//             width: 22px;
+//             height: 22px;
+//             background-color: $blue_fonts; 
+                  
+//          }   
+//     }   
+//     .slick-next {
+//         right: 15px;
+//     }
+//     .slick-next:before {
+//         content: "\f105"; 
+//         position: absolute;  
+//         top: 0px;
+//         right: 6px;
+//     }
+//     .slick-prev {
+//         left: 1100px;
+        
+//     }     
+//     .slick-prev:before {
+//         content: "\f104";
+//         position: absolute;  
+//         top: 0px;
+//         left: 6px;  
+//     }
+//     .slick-prev, .slick-next {
+       
+//         top: 254px;
+//         display: block;
+//         cursor: none;
+//         border: none;
+//     }
+//     .slick-prev:before, .slick-next:before {
+//         font-family: 'icomoon';
+//         font-size: 20px;
+//         line-height: 20px;        
+//         color: white;
+//         cursor:pointer;      
+//     }
+//  }
+ 
+  
+  

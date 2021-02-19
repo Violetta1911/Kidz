@@ -1,0 +1,221 @@
+html {
+    box-sizing: border-box;
+    height: 100%;
+  
+}
+    
+
+ *,
+ *::before,
+ *::after {
+     box-sizing: inherit;
+ }
+ 
+ a{
+     display: inline-block;
+     text-decoration: none;
+     color: inherit;
+     outline: none;
+ }
+ 
+
+ ul,
+ li,
+ h1, h2, h3, h4, h5,p{
+     margin: 0;
+     padding: 0;
+     list-style: none;
+ }
+ button {
+    outline: none;
+ }
+ 
+ body {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 14px;   
+     height: 100%;    
+      }
+  .container {
+      max-width: 1200px;
+      margin: 0 auto;
+  }
+  .line {
+      display:flex;
+      justify-content: center;    
+      &__item {        
+          width: 160px;
+          height: 6px;          
+          &--yellow {
+              background-color: $yellow;
+          }
+          &--green {
+            background-color: $green;
+        }
+        &--pink {
+            background-color: $pink;
+        }
+        &--blue {
+            background-color: $blue;
+        }
+        &--red {
+            background-color: $red;
+        }
+        &--violet {
+            background-color: $violet;
+        }
+      }
+  }
+
+// .menu-list {                
+//         @include flex;
+//         li {
+           
+//              a {
+//                 transition: all 0.5s;
+//             }
+//            & + li{
+//             margin-left: 30px;
+//            } 
+//            &.contact-us {
+//             margin-left: 40px;
+//         }
+//         &.home {
+//             margin-right: 5px;
+//         }
+//         a:hover,
+//         a:active {
+//             color: $blue_fonts;                    
+//         }
+       
+//         }  
+//     }
+
+// .navigation {
+    
+//     padding: 23px 0;
+//     background-color: $blue_bg;
+//     &__inner {
+//         @include flex;
+//         align-items: center;
+//     }
+//     h2 {
+//         color: #fff;
+//         margin-bottom: 0;
+//         line-height: 24px;
+//     }
+// }
+// // h1 {
+// //     font-size: 35px;
+// //     margin-bottom: 20px;
+// //     text-transform: uppercase;
+// //     font-family: 'Play', sans-serif;
+// //     color: $blue_bg;
+// //     font-weight: 400;
+   
+// // }
+// // h2 {
+// //     font-size: 24px;
+// //     margin-bottom: 25px;
+// //     text-transform: uppercase;
+// //     font-family: 'Play', sans-serif;
+// //     font-weight: 400;
+// //     color: $blue_bg;
+// // }
+// // h3 {
+// //     font-size: 20px;
+// //     text-transform: uppercase;
+// //     font-family: 'Play', sans-serif;
+// //     font-weight: 800;
+// //     color: $blue_bg;
+// //     margin-bottom: 30px;
+
+// // }
+
+
+// form {
+
+//     .input-inner {
+//         @include flex;
+//         flex-wrap: wrap;
+//     }
+//     input {
+//         padding: 15px 22px;
+//         border: 1px solid #ebebeb; 
+//         outline-color: $blue_fonts;       
+//         &::placeholder{
+//             font-family: 'Open Sans Light';    
+//         }
+        
+//     }
+//     textarea {
+//         width: 100%;
+//         border: 1px solid #ebebeb;
+//         padding: 15px;
+//         color: #6f6f6f; 
+//         font-family: 'Open Sans Light';       
+//     outline-color: $blue_fonts;
+//     }
+       
+//     button {
+//         @include btn-font;
+//         border: none;
+//     }
+// }
+
+
+// .btn {    
+//     &.mixitup-control-active {     
+//              position: relative;
+//              &::after {
+//                  position: absolute;
+//                  content: '';
+//                  border-bottom:2px solid $blue_bg ;
+//                  width: 100%; 
+//                  top: 20px;
+//                  left: 0px;
+//               }        
+//        }
+//     }
+//     .slick-slider {
+//         margin: 0 -15px;
+//     }
+//     .slick-slide {
+//         margin: 0 -15px;
+        
+//         text-align: center;
+//         margin: 0 15px;
+//     }
+
+//  .breadcrumbs {
+   
+//     &__list{
+//         li{
+//             display: inline-block;
+//             position: relative; 
+            
+//             & + li{
+//                 padding-left: 24px;
+//                   &::before{
+//                     content: "\f105";
+//                     font-family: 'icomoon';
+//                     position: absolute;
+//                     left: 8px;
+//                     color: #fff;
+//                 }
+//             } 
+//             // &:last-child{
+//             //     a,
+//             //     span{
+//             //         color: $bg;
+//             //     }
+//             // }       
+//         } 
+        
+//     a {
+//         color: #fff;;
+//     }
+
+//     }
+// }    
+

@@ -1,0 +1,110 @@
+@import '_vars';
+@import '_global';
+@import '_fonts';
+
+
+// header 
+.header {  
+   &__contacts {
+      padding: 12px 0;
+      background-color: #2f3c43; 
+      color: rgba(255, 255, 255, 0.8);
+   }
+   &__contacts-inner,
+   &__menu-inner {
+      @include flex;
+      align-items: center;
+   } 
+   &__menu-inner {
+      padding: 20px 0;
+   }
+      
+}
+
+.contacts,
+.social {
+  line-height: 23px;
+  li {
+   display: inline-block;
+   padding-left: 30px;
+   position: relative;
+   & + li {
+      margin-left: 31px;
+   }
+   span, a {
+      display: block;
+      margin-top: 4px;
+   }
+  }
+  
+}
+.icon-envelope-o::before {
+   @include icons-header;    
+   background-color: $yellow;     
+}
+.icon-clock-o::before {
+ @include icons-header;    
+ background-color: $pink; 
+
+   
+}
+.icon-phone::before { 
+ @include icons-header;    
+ background-color: $green;    
+}
+.icon-globe::before {
+   @include icons-header;    
+   background-color: $blue; 
+   top: 0px;    
+}
+.icon-globe::after {
+   content: "\f00c";
+   position: absolute;
+   right: -20px; 
+
+}
+
+.icon-unlock-alt::before {
+   @include icons-header;    
+   background-color: $violet; 
+   top: 0px;
+}
+.icon-shopping-basket::before {
+   position: absolute;
+   width: 30px;
+   height: 30px;
+   border-radius: 5px;
+   background-color: $red;
+   text-align: center;
+   padding-top: 6px;
+   right: 10px;
+   top: -15px;
+}
+.menu-list {
+
+   li { 
+      position: relative;
+           
+      display: inline-block;
+      & + li {
+         margin-left: 60px;
+      }
+      & + li a::before {
+               
+         content: '';
+         border-right: 1px solid $yellow;
+         left: 0;
+
+      }
+   }
+}
+
+ 
+ 
+
+
+
+@import '_media'
+
+
+  
