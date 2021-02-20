@@ -6,6 +6,7 @@
  $red: #ea7066;
  $blue: #84bed6;
  $violet: #a597e7;
+ $grey: #f8f8f8;
 
  @mixin flex {
      display: flex;
@@ -52,6 +53,16 @@
    font-weight: 600;
    color: rgb(102, 102, 102);
    font-size: 14px;
+ }
+ @mixin bg-image {
+   background-position:bottom;
+   background-repeat: no-repeat;
+   text-align: center;
+   color: #fff;
+   font-family: 'OpenSans', sans-serif;
+   h2 {
+      margin-bottom: 20px;
+   }
  }
 
 //  @mixin slider-btn {

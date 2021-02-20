@@ -191,8 +191,6 @@
       } 
   
    h1 {
-      font-size: 52px;
-      font-weight: bold;
       margin-bottom: 15px;
    }
    p {
@@ -320,16 +318,9 @@
 // start more-information 
 
 .more-information {
-   height: 295px;
-   background-position:bottom;
-   background-repeat: no-repeat;
-   text-align: center;
-   color: #fff;
-   padding-top: 70px;
-    font-family: 'OpenSans', sans-serif;
-   h2 {
-      margin-bottom: 20px;
-   }
+   @include bg-image;
+   padding: 75px 0;
+    
   
   a {
    padding: 10px 20px;
@@ -341,16 +332,14 @@
    text-transform: uppercase;
    font-size: 16px;
    margin-top: 30px;
-   line-height: 25px;    
-
+   line-height: 25px;   
   }
 }
 
 // start courses 
 
 .courses {
-   padding: 100px 0;
-  
+   padding: 100px 0;  
 
    &__inner {
       margin-top: 50px;
@@ -361,7 +350,7 @@
       padding-bottom: 24px;
       border-radius: 10px;
       box-shadow: 0px 4px 0px 0px rgba(0, 0, 0, 0.1);
-      background-color: #f8f8f8;
+      background-color: $grey;
       font-family: 'OpenSans', sans-serif;
       color: rgb(102, 102, 102);
       &-img {
@@ -508,7 +497,7 @@ a {
 }
 
    .title-decor--teachers.title-decor  {     
-      width: 270px;
+      width: 275px;
       color: #fff;
       text-align: center;   
      
@@ -523,18 +512,18 @@ a {
          background-color: $red;
     }
     &::before {
-      left: 20px;
+      left: 0px;
    }
    &::after {
-      right: 20px;
+      right: 0px;
    }  
    }
    .decor-line--right {
-      right: -31px;
+      right: -50px;
       
   }
   .decor-line--left {
-   left: -31px;
+   left: -50px;
 }
 .decor-line {  
      background-color: $red;  
@@ -590,7 +579,7 @@ a {
       
       button {
          padding: 13px 30px;
-         background-color: #f8f8f8;         
+         background-color: $grey;         
             margin-left: 10px;
                   }      
    }
@@ -614,11 +603,50 @@ a {
    }   
 }
  
- 
+// start facts
+.facts {
+   padding: 80px 0 90px;
+   @include bg-image;
+   background-size: 130%;
+   background-position: center;
+   h2 {
+      margin-bottom: 15px;
+      line-height: 24px;
+   }
+   p {
+      margin-bottom: 48px;;
+   }
+   span {
+      display: block;
+      padding-top: 35px;
+      padding-bottom: 35px;
+      margin-bottom: 21px;
+      width: 145px;
+      height: 145px;
+      border: 4px solid #fff ;
+      border-radius: 50%;
+      font-family: 'Dosis', sans-serif;
+      font-size: 56px;
+      font-weight: 600;
+   }
+   a {
+      padding: 15px 20px;
+      border-radius: 5px;
+      box-shadow: 0px 4px 0px 0px rgba(0, 0, 0, 0.1);
+      text-transform: uppercase;
+      font-family: 'Open Sans', sans-serif;
+      font-weight: 600;
+      color: #fff; 
+   }
+   &__inner {
+      @include flex;
+   }
+} 
 
  
  
  
+
  
  
 
@@ -631,4 +659,3 @@ a {
 @import '_media'
 
 
-  

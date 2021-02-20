@@ -27,12 +27,17 @@ html {
      padding: 0;
      list-style: none;
  }
+ h1, h2, h3, h4, h5 {
+    font-family: "Dosis";
+    font-weight: bold;
+ }
+ 
  button {
     outline: none;
  }
  
  body {
-    font-family: 'Dosis', sans-serif;
+    font-family: 'Dosis';
     font-weight: 400;
     font-size: 15px;   
      height: 100%; 
@@ -54,19 +59,26 @@ html {
           height: 6px;          
       }
   }
+  h1 {
+      font-size: 52px;
+      
+  }
   h2 {
-      font-size: 32px;        
+      font-size: 36px; 
+      font-weight: 800;    
+  }
+  h3 {
+    font-size: 32px;   
+    font-weight: 600; 
   }
   h4 {
     margin-bottom: 15px;
     font-size: 24px;
-    font-family: "Dosis";
-    font-weight: bold;
     line-height: 0.917;
     
  }
   .title-decor {     
-    width: 185px;
+    width: 186px;
     color: $red;
     text-align: center;   
    
@@ -86,7 +98,6 @@ html {
  &::after {
     right: 49px;
  }
-
  }
 
   .bg--yellow {
