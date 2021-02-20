@@ -424,32 +424,22 @@
 }
 button {
    margin-right: 20px;
-   border-radius: 5px;
-   background-color: rgb(255, 255, 255);
-   box-shadow: 0px 4px 0px 0px rgba(0, 0, 0, 0.1);
    width: 157px;
    height: 40px;
-   text-transform: uppercase;
-   outline: none;
-   border: none;
-   color: rgb(102, 102, 102);
-   transition: all 0.3s;
+   @include btn-font;
+   
    &:hover {
       background-color: $yellow;
       color: #fff;     
          &.border--blue {
            background-color: $blue;
-   
          }
          &.border--green {
-            background-color: $green;
-            
+            background-color: $green;  
          }
          &.border--red {
-            background-color: $red;
-           
+            background-color: $red;           
          }      
-      
    }
 }
 a {
@@ -590,11 +580,43 @@ a {
   }
 }
 
+// gallery 
 
+.gallery {
+   padding: 100px 0;
+   text-align: center;
+   &__navigation {
+      margin: 50px auto 0px;
+      
+      button {
+         padding: 13px 30px;
+         background-color: #f8f8f8;         
+            margin-left: 10px;
+                  }      
+   }
+   &__box {
+      display:flex;
+      justify-content: flex-start;
+      flex-wrap: wrap;
+      margin-left: -25px;
+      padding: 50px 0;
+   }
+   .box__item {
+      border-radius: 10px;
+      box-shadow: 0px 4px 0px 0px rgba(0, 0, 0, 0.1);
+      flex-basis: calc(25% - 30px);
+      height: 365px;
+      margin-left: 30px;
+      margin-bottom: 30px;
+      height: 220px;
+      background-repeat: no-repeat;
+      background-position: center;         
+   }   
+}
  
  
 
-
+ 
  
  
  

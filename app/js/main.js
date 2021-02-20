@@ -11,8 +11,8 @@ $(function(){
         speed: 300,
         slidesToShow: 4,
         slideToScroll: 1
-
     });
    
+    let mixer = mixitup ('.gallery__box'); 
     
 });
