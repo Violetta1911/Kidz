@@ -48,9 +48,7 @@ html {
       margin: 0 auto;
   }
 
-  .content {
-      max-width: 1900px;
-  }
+ 
   .line {
       display:flex;
       justify-content: center;    
@@ -65,7 +63,7 @@ html {
   }
   h2 {
       font-size: 36px; 
-      font-weight: 800;    
+       
   }
   h3 {
     font-size: 32px;   
@@ -76,6 +74,11 @@ html {
     font-size: 24px;
     line-height: 0.917;    
  }
+ h5 {
+     font-size: 20px;
+     color: #fff;
+     }
+     
  p {
     font-family: 'Open Sans', sans-serif;
  }
@@ -149,6 +152,10 @@ html {
 }
 .border-blue {
     border:3px solid $blue;
+    &__inner {
+        // @include flex;
+        color: #fff;
+    }
    
 }
 
