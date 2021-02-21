@@ -24,6 +24,18 @@
    &__menu-inner {
       padding: 20px 0;
    }
+   .icon-list {
+      border-color: $green;
+   }
+   .icon-pencil-square-o {
+      border-color: $red;
+   }
+   .icon-calendar{
+      border-color: $blue;
+   }
+   .icon-gg {
+      border-color: $violet;
+   }
       
 }
 
@@ -186,12 +198,12 @@
 .main-slider {
    position: relative;
    text-shadow:  0px 4px 2px  rgba(0, 0, 0, 0.3);
-   .slick-slider {      
+   .slick-slider {   
       max-height: 560px;
-      overflow: hidden;
-      align-items: center;      
+      overflow-y: hidden;
+      align-items: center;               
       } 
-  
+      
    h1 {
       margin-bottom: 15px;
    }
@@ -235,7 +247,7 @@
           
       h3 {
        font-size: 32px;
-       font-weight: 600;      
+       font-weight: 600;    
       }
       .icon-file-text  {
          @include icon-block;       
@@ -415,6 +427,7 @@ a {
       max-width: 150px;
       color: #fff;
       img {
+         
          width: 150px;
          height: 150px;
          border-radius: 50%;
@@ -480,15 +493,16 @@ a {
     
    h5 {
       margin: 20px 0 10px;
-      font-size: 20px;
-      font-family: "OpenSans";
       line-height: 1.1;
       transition: all 1s;
    }
    span {
-      font-family: "OpenSans";
+      font-family: 'Open Sans', sans-serif;
       opacity: 0.7;
-       line-height: 1.467;
+      line-height: 1.467;
+      
+   }
+   .item-image {
       
    }
    .slick-current  {
@@ -553,8 +567,8 @@ a {
 .facts {
    padding: 80px 0 90px;
    @include bg-image;
-   // background-size: 130%;
    background-position: center;
+   
    h2 {
       margin-bottom: 15px;
       line-height: 24px;
@@ -615,6 +629,21 @@ a {
          padding-left: 20px;
          position: relative;
       }
+
+      em {
+         display: block;
+         padding: 10px;
+         width: 65px;
+         height: 55px;
+         border-radius: 10px;
+         text-align: center;
+         color: #fff;
+         font-family: 'Open Sans', sans-serif;
+         text-transform: uppercase;
+         font-weight: 600;        
+        
+      }
+      
    }
   
    .icon-user::before,

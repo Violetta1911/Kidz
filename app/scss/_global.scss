@@ -10,6 +10,14 @@ html {
  *::after {
      box-sizing: inherit;
  }
+ .wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    // max-width: 1600px;
+    
+}   
+
  
  a{
      display: inline-block;
@@ -47,8 +55,12 @@ html {
       max-width: 1200px;
       margin: 0 auto;
   }
-
- 
+  .content {
+    flex: 1 0 auto;
+}
+.footer {
+    flex: 0 0 auto;
+}
   .line {
       display:flex;
       justify-content: center;    
@@ -77,6 +89,7 @@ html {
  h5 {
      font-size: 20px;
      color: #fff;
+     font-family: 'Open Sans', sans-serif;
      }
      
  p {
@@ -158,9 +171,6 @@ html {
     }
    
 }
-
-
-
    .title-block {
        position: relative;
        width: 360px;
@@ -263,6 +273,11 @@ html {
     font-weight: 600;
     text-transform: uppercase;
 }  
+#smile {
+    position: absolute;
+    right: -20px;
+    
+}
 
 // .menu-list {                
 //         @include flex;
