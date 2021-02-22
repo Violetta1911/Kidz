@@ -36,15 +36,15 @@ $(function(){
          context.fill();
          // Рисуем правый глаз 
          context.beginPath();
-         context.arc(58,45,4,0,Math.PI*2,true);
+         context.arc(57,45,4,0,Math.PI*2,true);
          context.closePath();
          context.stroke();
          context.fill();
          // Рисуем рот
          context.beginPath();
          context.moveTo(30,58);
-         context.quadraticCurveTo(50,65,65,58);
-         context.quadraticCurveTo(50,75,35,58); 
+         context.quadraticCurveTo(50,65,65,60);
+         context.quadraticCurveTo(50,75,35,60); 
          context.closePath();
          context.stroke();
          context.fill();

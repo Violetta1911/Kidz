@@ -27,6 +27,7 @@
  @mixin icons-header-menu {
     position: absolute;
          top: -40px;
+         left: 50%;
          width: 35px;
          height: 35px;
          border-radius: 50%;
@@ -125,6 +126,23 @@
          }           
    }
    
+}
+@mixin caret-up {
+   content: "\f0d8";
+      font-family: 'icomoon';
+      position: absolute;
+      font-size: 24px;
+      top: -20px;
+}
+@mixin dropdown {
+   width: 230px;
+   position: absolute;
+   z-index: 2;
+   padding: 20px 10px;
+   background-color: #fff;
+   border-top: 3px solid $red;
+   border-radius: 5px;
+
 }
 
 //  @mixin slider-btn {
