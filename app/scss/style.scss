@@ -12,6 +12,7 @@
       box-shadow: 0px 4px 0px 0px rgba(0, 0, 0, 0.1);
    }
    &__contacts {
+      
       padding: 12px 0;
       background-color: #2f3c43; 
       color: rgba(255, 255, 255, 0.8);
@@ -35,8 +36,7 @@
    }
    .icon-gg {
       border-color: $violet;
-   }
-      
+   } 
 }
 
 .contacts,
@@ -113,7 +113,6 @@
          font-size: 15px;
          font-weight: 800px;
       }
-           
       display: inline-block;
       & + li {
          line-height: 20px;
@@ -203,14 +202,20 @@
 .icon-list:hover,
 .icon-list:focus {
    .dropdown-list {
-      display: block;
-   }
+      z-index: 12; 
+   } 
+   .slick-prev,
+    .slick-next
+    {
+       z-index: 0;
+   } 
+
   }      
-  .mega-menu {    
+.mega-menu {    
    position: absolute; 
-   top: 50px; 
+   top: 68px; 
    left: -650px;  
-    z-index: 0;
+   z-index: 0;
    // transform: translateY(-600px);
    width: 1200px;    
    padding: 30px 15px 40px;
@@ -250,9 +255,9 @@
 }   
          
 .dropdown-list {
-   display: none;
+   display: block;
    @include dropdown;
-   top: 50px;
+   top: 66px;
    left: -100%;  
    li {
       position: relative;
@@ -282,8 +287,7 @@
       right: 20px;     
   }
   .icon-angle-double-right:hover,
-  .icon-angle-double-right:focus,
-   {
+  .icon-angle-double-right:focus {
    .dropdown-list__item {
       display: block;
       a:hover{
@@ -292,31 +296,32 @@
    }
 }
   }
-}
+
 .dropdown-list__item {
    display: none;
    @include dropdown;
    right: -120%;
    top: -20%; 
    }
-   
+
    .icon-caret-left::before {
       position: absolute;
       left: -5px;
       color: #fff;
       font-size: 24px;
    }
-
-
+}
 // start main-slider section
 
 .main-slider {
-   position: relative;
-   text-shadow:  0px 4px 2px  rgba(0, 0, 0, 0.3);
+   text-shadow:  0px 4px 2px  rgba(0, 0, 0, 0.3);   
+    
    .slick-slider {   
+      max-width: 1920px;
       max-height: 560px;
       overflow-y: hidden;
-      align-items: center;               
+      align-items: center;  
+                      
       } 
       
    h1 {
@@ -326,16 +331,21 @@
       font-size: 25px;
       font-family: 'Dosis', sans-serif;
       line-height: 1.36;
-      width: 670px;
-     
+      width: 670px;     
+   }
+
+   &__item {
+      position: relative;
    }
    &__item-info {
       position: absolute;
       top: 140px;
+      left: 100px;   
       z-index: 5;
       color: #fff;
    }
 }
+
 
 //  start block section
 
@@ -344,8 +354,7 @@
    height: 106px; 
    
    &__inner {
-      @include flex;
-      
+      @include flex;      
       width: 1200px;  
       position: absolute; 
       top: -100px;
@@ -474,7 +483,9 @@
       width: 270px;
       @include items;
       &-img {
-         height: 230px;        
+         height: 230px;  
+         border-top-left-radius: 10px; 
+         border-top-right-radius: 10px;         
          span {
             display: block;
             width: 70px;
@@ -893,7 +904,7 @@ a {
       };
    }
    &__item {
-      min-width: 295px;
+      width: 295px;
       color: rgba(196, 219, 244, 0.702);
       position: relative;
    }  
