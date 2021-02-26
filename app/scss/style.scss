@@ -213,7 +213,7 @@
   }      
 .mega-menu {    
    position: absolute; 
-   top: 68px; 
+   top: 50px; 
    left: -650px;  
    z-index: 0;
    // transform: translateY(-600px);
@@ -257,7 +257,7 @@
 .dropdown-list {
    display: block;
    @include dropdown;
-   top: 66px;
+   top: 48px;
    left: -100%;  
    li {
       position: relative;
@@ -300,13 +300,14 @@
 .dropdown-list__item {
    display: none;
    @include dropdown;
-   right: -120%;
+   right: -117%;
    top: -20%; 
    }
 
    .icon-caret-left::before {
       position: absolute;
       left: -5px;
+      top: 5px;
       color: #fff;
       font-size: 24px;
    }

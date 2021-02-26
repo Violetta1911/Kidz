@@ -5,7 +5,16 @@ $(function(){
         arrows: true,   
         autoplay: true,
          autoplaySpeed: 2000,
-         variableWidth: true
+         variableWidth: true,
+         responsive: [          
+          {
+            breakpoint: 520,
+            settings: {
+             arrows: false,
+            }
+          }
+          
+        ]
     });
 
     $('.teachers__slider').slick({
