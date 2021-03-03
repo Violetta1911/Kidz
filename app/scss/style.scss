@@ -193,12 +193,14 @@
       }
    }  
 
- .icon-file-text:hover,
- .icon-file-text:focus  {         
-         .mega-menu {
-            z-index: 2;      
-         }      
-}
+   
+      .icon-file-text:hover,
+      .icon-file-text:focus  {         
+              .submenu {
+                 z-index: 2;      
+              }      
+     }
+   
 .icon-list:hover,
 .icon-list:focus {
    .dropdown-list {
@@ -211,7 +213,7 @@
    } 
 
   }      
-.mega-menu {    
+.submenu {    
    position: absolute; 
    top: 50px; 
    left: -650px;  
@@ -241,6 +243,7 @@
            &:hover {
                background-color: $green;                
                color: #fff;
+               cursor: pointer;
                a {
                    color: #fff;
                  }           
@@ -266,6 +269,7 @@
       &:hover {
           background-color: $red;
           color: #ffF;
+          cursor: pointer;
              a {
                color: #fff;
              }  
@@ -300,7 +304,7 @@
 .dropdown-list__item {
    display: none;
    @include dropdown;
-   right: -117%;
+   right: -115%;
    top: -20%; 
    }
 
@@ -350,7 +354,7 @@
 
 //  start block section
 
-.block {    
+.categories {    
    position: relative; 
    height: 106px; 
    
@@ -419,8 +423,7 @@
      position: relative;
      width: 360px;     
      margin-top: 50px;
-     padding-left: 100px;
-     
+     padding-left: 100px;     
      
      span {
         position: absolute;
@@ -460,7 +463,7 @@
    @include bg-image;
    padding: 75px 0;   
   
-  a {
+  .contact-btn {
    padding: 10px 20px;
    margin-top: 30px;
    line-height: 25px;
@@ -516,6 +519,7 @@ button {
    height: 40px;
    @include btn-font;
    @include font;
+   cursor: pointer;
    
    &:hover {
       background-color: $yellow;
@@ -532,14 +536,14 @@ button {
    }
 }
 a {
-   padding-left: 7px;
+   margin-left: 7px;
    font-weight: 600;
    position: relative;
   @include more;
 }
 .icon-angle-double-right::before {
    position: absolute;
-   left: -7px;
+   left: -14px;
 }
 }
 
@@ -581,43 +585,16 @@ a {
   .slick-next {
    right: 0px;
 }
-
-   .title-decor--teachers.title-decor  {     
-      width: 275px;
-      color: #fff;
-      text-align: center;   
-     
-      &::before,
-      &::after {
-         position: absolute;
-         top: 35%;
-         content: '';        
-         width: 17px;
-         height: 17px;
-         border-radius: 50%;         
-         background-color: $red;
-    }
-    &::before {
-      left: 0px;
-   }
-   &::after {
-      right: 0px;
-   }  
-   }
-   .decor-line--right {
-      right: -50px;
-      
-  }
-  .decor-line--left {
-   left: -50px;
+h2 {
+   color: #fff;
+   text-align: center;
 }
-.decor-line {  
-     background-color: $red;  
-      &::before{        
-         border-bottom: 2px solid $red;        
-      }
+   .title-block {
+      background-image: url(../images/title_background_red.png);
+      background-size: contain;
+      width: 460px;
    }
-    
+
    h5 {
       margin: 20px 0 10px;
       line-height: 1.1;

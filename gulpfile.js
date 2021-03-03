@@ -21,7 +21,7 @@ function images () {
         ]
     })
 ]))
-  .pipe(dest('docs/images'))
+  .pipe(dest('dist/images'))
 }
 
 function styles() {
@@ -42,9 +42,9 @@ function styles() {
 
  function scripts (){
     return src([        
-        'node_modules/jquery/docs/jquery.js',
+        'node_modules/jquery/dist/jquery.js',
         'node_modules/slick-carousel/slick/slick.js',
-        'node_modules/mixitup/docs/mixitup.js',
+        'node_modules/mixitup/dist/mixitup.js',
         'app/js/main.js'])
       .pipe (concat ('main.min.js'))
       .pipe (uglify())
@@ -59,11 +59,11 @@ function styles() {
      'app/js/main.min.js',
      'app/*.html'
    ], {base:'app'})
-   .pipe(dest('docs')) 
+   .pipe(dest('dist')) 
  }
 
- function cleandocs (){
-   return del('docs')
+ function cleandist (){
+   return del('dist')
  } 
 
   function watching (){
@@ -86,6 +86,6 @@ exports.watching = watching;
 exports.browsersync = browsersync;
 exports.images = images;
 
-exports.build = series(cleandocs, images, build);
+exports.build = series(cleandist, images, build);
 exports.default = parallel (browsersync, watching, scripts);
 

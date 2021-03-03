@@ -9,7 +9,7 @@
         }
      }
     
-.block {         
+.categories {         
         &__inner {
             @include flex;         
            top: -70px;
@@ -106,14 +106,14 @@
     }
  }
  a {
-    padding-left: 7px;
+    margin-left: 7px;
     font-weight: 600;
     position: relative;
    @include more;
  }
  .icon-angle-double-right::before {
     position: absolute;
-    left: -7px;
+    left: -14px;
  }
  }
  .teachers {
@@ -280,7 +280,7 @@
                right: -5px;
             }
            }
-           .mega-menu {   
+           .submenu {   
             top: 25px; 
             left: 185px;  
             z-index: 2;
@@ -325,7 +325,7 @@
       
    }
    
-   .block {    
+   .categories {    
       position: relative; 
       height: 56px; 
       
@@ -485,7 +485,7 @@
       }
     }
    
-.block {         
+.categories {         
       &__item {
           width: 120px;
           height: 130px;
@@ -570,7 +570,7 @@ a {
        }
     }
    
-.block {         
+.categories {         
       display: none;
 }
 .title-block {
@@ -580,37 +580,7 @@ a {
       font-size: 20px;
    }
 }   
-.decor-line {  
-width:40px;
-&--left,
-&--right {
-   &::before{
-      width: 30px;
-   }
-}
-&--right{    
-  right: 11px;     
-  &::before{
-     left: -10px;
-  }
-} &--left{      
-    left: 11px;        
-    &::before{         
-      right: -10px;
-   }
-  }
- 
-}
 
-.title-decor {     
- width: 186px;
- &::before,
- &::after {
-    width: 13px;
-    height: 13px;
-}
-
-}  
 .courses {
   
    &__item {
@@ -644,29 +614,14 @@ width:40px;
    opacity: 1;
    transform: translateY(15px);
 }
-.title-decor--teachers.title-decor  {     
-   width: 165px;  
-   &::before,
-   &::after {        
-      width: 13px;
-      height: 13px;
- }
- &::before {
-   left: 20px;
-}
-&::after {
-   right: 20px;
-}  
-}
-.decor-line--right {
-   right: -20px;
-   
-}
-.decor-line--left {
-left: -20px;
-}
+   .title-block {
+      background-image: url(../images/title_background_red.png);
+      background-size: contain;
+      width: 300px;
+   }  
 
 }
+
 .gallery{
    &__navigation {
       margin: 30px auto 0px;

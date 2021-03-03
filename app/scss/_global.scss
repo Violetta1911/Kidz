@@ -1,7 +1,6 @@
 html {
     box-sizing: border-box;
     height: 100%;
-  
 }
 
  *,
@@ -150,64 +149,21 @@ html {
    
 }
    .title-block {
-       position: relative;
+       text-align: center;
+       background-image: url(../images/title_background.png);
+       background-size:contain;
+       background-position: center;
+       background-repeat: no-repeat;
        width: 360px;
-       display: flex;
-       justify-content: center;
-       margin: 0 auto 30px;
+       margin: 0 auto 30px; 
+     
    }
    .title-decor {     
     width: 186px;
     color: $red;
-    text-align: center;   
-   
-    &::before,
-    &::after {
-       position: absolute;
-       top: 35%;
-       content: '';        
-       width: 17px;
-       height: 17px;
-       border-radius: 50%;         
-       background-color: $blue;
-  }
-  &::before {
-    left: 49px;
- }
- &::after {
-    right: 49px;
- }
- }   
-   .decor-line {  
-    width:50px;
-    height: 2px;
-    background-color: $blue;
-    &--left,
-    &--right {
-       position: absolute;
-       top: 50%;
-       &::before{
-          content: '';
-          position: absolute;
-          width: 40px;
-          border-bottom: 2px solid $blue;
-          top: 3px;
-       }
-    }
-    &--right{    
-      right: 0px;     
-      &::before{
-         left: -2px;
-      }
-    } &--left{      
-        left: 0px;        
-        &::before{         
-          right: -2px;
-       }
-      }
-     
- }
- 
+    text-align: center; 
+    margin: 0 auto 30px; 
+   }  
  
   .slick-prev,
   .slick-next {
@@ -289,7 +245,15 @@ html {
     color: #fff;
 
     }
-
+.icon-shopping-basket {
+    span {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+        text-indent: 100%;
+        overflow: hidden;
+    }
+}
 
 // .menu-list {                
 //         @include flex;
