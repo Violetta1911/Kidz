@@ -215,7 +215,7 @@
   }      
 .submenu {    
    position: absolute; 
-   top: 50px; 
+   top: 48px; 
    left: -650px;  
    z-index: 0;
    // transform: translateY(-600px);
@@ -253,13 +253,16 @@
    &::after {
      @include caret-up;
      left: 700px;
-     color: $green;     
+     top: -18px;
+     color: $green;
+         
    } 
 }   
          
 .dropdown-list {
    display: block;
    @include dropdown;
+   padding-right: 0;
    top: 48px;
    left: -100%;  
    li {
@@ -304,7 +307,7 @@
 .dropdown-list__item {
    display: none;
    @include dropdown;
-   right: -115%;
+   right: -105%;
    top: -20%; 
    }
 
@@ -350,8 +353,6 @@
       color: #fff;
    }
 }
-
-
 //  start block section
 
 .categories {    
